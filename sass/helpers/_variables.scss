@@ -1,0 +1,94 @@
+//Color
+$colors:(
+    "pink": #b61984,
+    "white-1":#ffffff,
+    "white-2":rgba(255, 255, 255, 1),
+    "black-1": rgba(0,0,0,.9),
+    "black-2":rgba(0,0,0,.2),
+    "black-3":#191919,
+    "purple": #dcd1f3,
+);
+
+//font-size
+$fs-1: 0.75rem;
+$fs-2: 0.8125rem;
+$fs-3: 0.9375rem;
+$fs-4: 1.1rem;
+$fs-5: 1.55rem;
+$fs-6: 2.25rem;
+$fs-7: 3rem;
+$fs-8: 4rem;
+
+//line-height
+$lh-1: 1rem;
+$lh-2: 1.8rem;
+$lh-3: 2.8rem;
+$lh-4: 4rem;
+$lh-5: 5rem;
+
+//heigth
+$h-0: 0.625rem;
+$h-1: 2rem;
+$h-2: 3.5rem;
+$h-3: 5rem;
+$h-4: 7rem;
+$h-5: 18rem;
+$h-6: 38rem;
+$h-7: 45rem;
+$h-8: 50rem;
+
+//width
+$w-0: 0.625rem;
+$w-1: 5rem;
+$w-2: 7rem;
+$w-3: 18rem;
+$w-4: 23rem;
+$w-5: 78.75rem;
+
+//font-weight
+$fw-1: 400;
+$fw-2: 500;
+$fw-3: 600;
+$fw-4: 700;
+
+//margin
+$mg-1: 0.75rem;
+$mg-2: 1rem;
+$mg-3: 1.25rem;
+$mg-4: 1.5rem;
+$mg-5: 1.75rem;
+$mg-6: 2.25rem;
+$mg-7: 4rem;
+$mg-8: 5rem;
+
+
+//padding
+$pd-1: 0.5rem;
+$pd-2: 1rem;
+$pd-3: 1.25rem;
+$pd-4: 1.5625rem;
+$pd-5: 3rem;
+$pd-6: 4rem;
+$pd-7: 5rem;
+
+//border
+$bd-1: 2px;
+$bd-2: 5px;
+
+
+//border-radius
+$br-1: 10px;
+$br-2: 20px;
+$br-3: 50px;
+
+//break points
+$breakpoints: (
+    "extra-large": 1200px,
+    "large": 992px,
+    "medium": 768px,
+    "small": 576px,
+    "extra-large-down": 1199.98px,
+    "large-down": 991.98px,
+    "medium-down": 767.98px,
+    "small-down": 575.98px,
+);

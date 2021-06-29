@@ -1,0 +1,58 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+  color: colors("black-1");
+  &:hover {
+    color: colors("pink");
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+input,
+select,
+textarea {
+  border: none;
+  outline: none;
+}
+
+.form-control {
+  border-radius: $br-2;
+}
+
+li {
+  list-style: none;
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 1s;
+  position: relative;
+  z-index: 5;
+}
+
+.animate__animated.animate__fadeInLeft {
+  position: relative;
+  z-index: 5;
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-delay: 0.5s;
+}
+
+// "extra-large": <= 1200px
+@include responsive("extra-large") {
+  body{
+    position: relative;
+    left: 0%;
+    transition: all 0.7s linear;
+  }
+}

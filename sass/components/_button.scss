@@ -1,0 +1,134 @@
+.btnCall {
+  padding: $pd-1 $pd-3;
+  margin-right: $mg-3;
+  @include styleButton();
+  border: 1px solid colors("pink");
+  box-shadow: 0 0 0 3rem colors("pink") inset;
+  > a {
+    color: colors("white-1");
+  }
+  &:hover {
+    border: 1px solid colors("pink");
+    box-shadow: 0 0 0 1px colors("white-1") inset;
+    transition: all 0.3s ease;
+    > a {
+      color: colors("pink");
+    }
+  }
+}
+
+.btnSend {
+  margin: $mg-5 0;
+  padding: $pd-2 $pd-5;
+  letter-spacing: 1px;
+  border: 1px solid colors("pink");
+  box-shadow: 0 0 0 3rem colors("pink") inset;
+  @include styleButton();
+  color: colors("white-1");
+  &:hover {
+    border: 1px solid colors("pink");
+    box-shadow: 0 0 0 1px colors("white-1") inset;
+    transition: all 0.3s ease;
+    color: colors("pink");
+  }
+}
+
+.btnSubcribe {
+  margin-top: $mg-1;
+  padding: $pd-2 $pd-5;
+  letter-spacing: 1px;
+  border: 1px solid colors("white-1");
+  box-shadow: 0 0 0 3rem colors("white-1") inset;
+  width: 100%;
+  @include styleButton();
+  color: colors("black-3");
+  &:hover {
+    border: 1px solid colors("white-1");
+    box-shadow: 0 0 0 1px colors("pink") inset;
+    transition: all 0.3s ease;
+    color: colors("white-1");
+  }
+}
+
+// "extra-large": <= 1200px
+@include responsive("extra-large") {
+  .btnCall{
+    margin-right: initial;
+  }
+  .navbar ul.navbar-toggler {
+    position: absolute;
+    z-index: 5;
+    top: 2%;
+    left: 2%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    li {
+      position: absolute;
+      left: 5%;
+      transform: translateY(-50%);
+      height: 2px;
+      width: 60%;
+      list-style: none;
+      background: colors("black-3");
+      transition: 0.9s;
+    }
+    li:nth-of-type(1) {
+      top: 25%;
+    }
+    li:nth-of-type(2) {
+      top: 52%;
+    }
+    li:nth-of-type(3) {
+      top: 80%;
+    }
+    &.active {
+      li {
+        background: colors("pink");
+      }
+      li:nth-of-type(1) {
+        top: 50%;
+        // left: 350%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+      li:nth-of-type(2) {
+        left: -100%;
+        opacity: 0;
+      }
+      li:nth-of-type(3) {
+        top: 50%;
+        // left: 350%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+}
+
+// "medium": <= 768px
+@include responsive("medium") {
+  .btnSubcribe {
+    padding: $pd-2;
+  }
+  .btnSend {
+    width: 100%;
+  }
+  .navbar ul.navbar-toggler {
+    width: 40px;
+    height: 40px;
+    // &.active {
+    //   li:nth-of-type(1) {
+    //     // left: 450%;
+    //   }
+    //   li:nth-of-type(3) {
+    //     // left: 450%;
+    //   }
+    // }
+  }
+}
+
+// "small": <= 568px
+@include responsive("small") {
+  .btnSubcribe{
+    font-size: $fs-2;
+  }
+}

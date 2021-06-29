@@ -1,0 +1,111 @@
+.contact {
+  position: relative;
+  margin-top: $mg-4;
+  .contact__img {
+    background-image: url(../../asset/img/contact_inner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100%;
+    position: relative;
+    z-index: 5;
+  }
+  .contact__form {
+    margin-top: 5rem;
+    position: relative;
+    border-radius: $br-2;
+    padding: $pd-3;
+    box-shadow: 0 1rem 1rem colors("black-2");
+    z-index: 5;
+    background-color: colors("white-2");
+    .contact__title {
+      @include styleText($fs-6, $fw-4, $mg-6);
+      margin-top: $mg-6;
+      text-align: center;
+    }
+    .contact__Name--Email {
+      display: flex;
+    }
+    .far {
+      color: colors("pink");
+      margin-right: $mg-1;
+    }
+    .fa {
+      color: colors("pink");
+    }
+    input {
+      width: $w-1;
+      &::placeholder {
+        @include styleText($fs-2, $fw-2, 0);
+      }
+    }
+    select {
+      width: $w-3;
+      background: transparent;
+      @include styleText($fs-2, $fw-2, 0);
+    }
+    textarea {
+      @include styleText($fs-2, $fw-2, 0);
+      width: $w-4;
+    }
+  }
+  .contact__footer {
+    position: absolute;
+    bottom: -5%;
+    z-index: 1;
+  }
+}
+
+// "extra-large": <= 1200px
+@include responsive("extra-large") {
+  .contact {
+    .contact__form {
+      margin-top: $mg-3;
+      select,
+      textarea {
+        width: 93%;
+      }
+    }
+  }
+}
+
+// "large": <= 992px
+@include responsive("large") {
+  .contact {
+    .contact__form {
+      select,
+      textarea {
+        width: 95%;
+      }
+    }
+    .contact__footer {
+      bottom: 0%;
+    }
+  }
+}
+
+// "medium": <= 768px
+@include responsive("medium") {
+  .contact {
+    .contact__form {
+      display: block;
+      .contact__title {
+        text-align: left;
+        font-size: $fs-6;
+      }
+      .contact__Name--Email {
+        display: block;
+      }
+    }
+  }
+}
+
+// "small" : <= 576px
+@include responsive("small") {
+  .contact {
+    select,
+    textarea {
+      width: 92%;
+    }
+  }
+}

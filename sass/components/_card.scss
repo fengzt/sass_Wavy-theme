@@ -1,0 +1,88 @@
+// .card--2,
+// .card--6 {
+//   &.animate__animated.animate__fadeIn {
+//     --animate-delay: 1s;
+//   }
+// }
+// .card--3,
+// .card--7 {
+//   --animate-delay: 2s;
+// }
+// .card--4,
+// .card--8 {
+//   --animate-delay: 2.5s;
+// }
+
+.cardTeacher {
+  border: none;
+  border-radius: $br-1;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  z-index: 5;
+
+  .cardTeacher__content {
+    background-color: colors("white-1");
+  }
+  .cardTeacher__subTitle {
+    @include styleText($fs-1, $fw-4, $mg-1);
+    color: colors("pink");
+  }
+  .cardTeacher__title {
+    @include styleText($fs-5, $fw-4, $mg-2);
+  }
+  .cardTeacher__text {
+    @include styleText($fs-2, $fw-2, $mg-2);
+  }
+  &:hover {
+    box-shadow: 0 1rem 1rem colors("black-2");
+  }
+  .cardTeacher__img {
+    transition: all 0.3s linear;
+  }
+  .cardTeacher__img:hover {
+    transform: scale(1.05);
+  }
+}
+
+// "extra-large": <= 1200px
+@include responsive("extra-large") {
+  .cardTeacher {
+    .cardTeacher__title {
+      font-size: $fs-5;
+    }
+    .cardTeacher__content {
+      padding: 1.25rem 0.75rem;
+    }
+  }
+}
+
+// "large": <= 992px
+@include responsive("large") {
+  .cardTeacher {
+    .cardTeacher__title {
+      font-size: $fs-5;
+    }
+    .cardTeacher__text {
+      font-size: $fs-3;
+    }
+  }
+}
+
+// "medium": <= 768px
+@include responsive("medium") {
+  .cardTeacher {
+    .cardTeacher__title {
+      font-size: $fs-5;
+    }
+  }
+}
+
+// "small" : <= 576px
+@include responsive("small") {
+  .cardTeacher {
+    .cardTeacher__title {
+      font-size: $fs-4;
+    }
+  }
+}

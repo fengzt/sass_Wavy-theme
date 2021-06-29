@@ -1,0 +1,64 @@
+.intro {
+  position: absolute;
+  width: 100%;
+  top: 4.5rem;
+  h3 {
+    @include styleText($fs-3, $fw-3, $mg-1);
+    color: colors("pink");
+  }
+  h2 {
+    @include styleText($fs-8, $fw-4, 0);
+  }
+}
+
+// "extra-large": <= 1200px
+@include responsive("extra-large") {
+  .intro {
+    top: 2rem;
+    .container {
+      padding: 0 $pd-4;
+    }
+    h3 {
+      margin-top: $mg-3;
+    }
+    h2 {
+      font-size: $fs-7;
+    }
+  }
+}
+
+// "large": <= 992px
+@include responsive("large") {
+  .intro {
+    .container {
+      padding: $pd-7 $pd-4;
+    }
+    h3 {
+      margin-top: $mg-3;
+    }
+    h2 {
+      font-size: $fs-7;
+    }
+  }
+}
+
+// "medium": <= 768px
+@include responsive("medium") {
+  .intro {
+    .container {
+      padding: $pd-6 $pd-4;
+    }
+  }
+}
+
+// "small" : <= 576px
+@include responsive("small") {
+  .intro {
+    .container {
+      padding: $pd-5 $pd-4;
+    }
+    h2 {
+      font-size: $fs-6;
+    }
+  }
+}

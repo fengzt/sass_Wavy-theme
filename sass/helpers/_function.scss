@@ -1,0 +1,32 @@
+@function colors($value) {
+  @if map-has-key($map: $colors, $key: $value) {
+    @return map-get($map: $colors, $key: $value);
+  }
+  @return "invalid key";
+}
+
+@for $img from 1 through 8 {
+  .card-img-#{$img} {
+    background-image: url(../../asset/img/teacher_#{$img}.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 33%;
+    border-top-left-radius: $br-1;
+    border-top-right-radius: $br-1;
+  }
+}
+
+$count: 1;
+@while $count < 5 {
+  .footer--#{$count} {
+    padding-right: 3rem;
+    @include responsive("small") {
+      padding: 0 2rem 0 1rem;
+    }
+    // &.animate__animated.animate__fadeIn {
+    //   --animate-delay: 0.5s * $count;
+    // }
+  }
+  $count: $count + 1;
+}
